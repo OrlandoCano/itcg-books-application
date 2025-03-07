@@ -9,5 +9,6 @@ public class LibraryApplicationExceptionHandler {
   @ExceptionHandler(value = BookNotFoundException.class)
   public ResponseEntity<String> handleBookNotFound(RuntimeException exception) {
     return ResponseEntity.badRequest().body(exception.getMessage());
+//    return ResponseEntity.notFound().build();
   }
 }
